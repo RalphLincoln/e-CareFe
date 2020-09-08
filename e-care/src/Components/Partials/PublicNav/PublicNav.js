@@ -5,32 +5,20 @@
 */
 
 import React, { Component } from "react";
-
-// IMPORTING LOGO IMAGE
-import Logo from "../../../Assets/homepage/Images/logo.png";
-
-// IMPORTING ICON FROM REACT ICONS
-import { ImSearch } from 'react-icons/im';
-import { MdPhoneIphone } from 'react-icons/md';
-
-// IMPORTING CUSTOM CSS
-import './publicNav.css';
-
-// IMPORTING FROM REACT ROUTER ROUTER DOM
-import { Link } from 'react-router-dom';
+import Logo from "../../../Images/logo.png";
 
 export default class PublicNav extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
-        <Link className="navbar-brand" to='/'>
+        <a className="navbar-brand" href="#">
           <img
             className="img-fluid"
             src={Logo}
             alt="e-care brand logo"
             loading="lazy"
           />
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -43,6 +31,7 @@ export default class PublicNav extends Component {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarToggler">
+<<<<<<< HEAD
           <div className="row">
             <form style={{ border: '1px solid #006F76', borderRadius: '5px' }} className="my-2 pl-2 pr-5 form-inline my-lg-0">
               <label htmlFor=""><ImSearch style={{ color: '#007D85' }} /></label>
@@ -58,22 +47,36 @@ export default class PublicNav extends Component {
             </button>
           </div>
           <ul className="navbar-nav ml-auto mt-2 mt-lg-0 ">
+=======
+          <form className="my-2 my-lg-0">
+            <input
+              className="form-control mr-sm-2"
+              type="search"
+              placeholder="Search for hospital"
+            />
+          </form>
+          <button className="btn btn-danger ml-lg-3 mr-auto px-3">
+            Emergency call
+          </button>
+          <ul className="navbar-nav mt-2 mt-lg-0 ">
+>>>>>>> 57391473d744dc84854246c718acf130095e4b58
             <li className="nav-item d-inline-block mx-auto d-lg-inline">
-              <Link to='/signin'
-                className="btn tag-btn px-3"
+              <a
+                className="btn btn-outline-success px-3"
+                href="#"
                 aria-disabled="true"
               >
                 Login
-              </Link>
+              </a>
             </li>
             <li
               className="mx-3 d-none d-lg-block"
               style={{
-                border: "1px solid #006F76",
+                border: "1px solid #28a745",
               }}
             ></li>
             <li className="nav-item d-inline-block mx-auto d-lg-inline mt-3 mt-lg-0 ">
-              <a className="btn tag-btn2 px-3" href="#" aria-disabled="true">
+              <a className="btn btn-success px-3" href="#" aria-disabled="true">
                 Register
               </a>
             </li>

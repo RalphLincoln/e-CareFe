@@ -1,47 +1,44 @@
 import React, { Component } from "react";
-
-// CUSTOM CSS
+import { Link } from 'react-router-dom';
 import "./HomePageHeader.css";
-
-// IMAGE FILES
-import logo from '../../../Assets/homepage/Images/the.png';
-import image1 from '../../../Assets/homepage/Images/e1.png';
-import image2 from '../../../Assets/homepage/Images/e2.png';
-import image3 from '../../../Assets/homepage/Images/e3.png';
-import image4 from '../../../Assets/homepage/Images/e4.png';
 
 class HomePageHeader extends Component {
   render() {
     return (
       <header className="header">
         <div className="hero-image">
+<<<<<<< HEAD
           <ul className="nav text-center d-flex justify-content-center pb-3 py-3 hero__top-nav">
+=======
+          <ul className="nav justify-content-center py-3 hero__top-nav">
+>>>>>>> 57391473d744dc84854246c718acf130095e4b58
             <li className="nav-item">
-              <a className="nav-link mr-4 pr-5 text-white" href="#">
+              <a className="nav-link text-white" href="#">
                 Patient care
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link mr-4 pr-5 text-white " href="#">
+              <a className="nav-link text-white " href="#">
                 Doctor
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link mr-4 pr-5 text-white" href="#">
+              <a className="nav-link text-white" href="#">
                 Hospitals
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link mr-4 pr-5 text-white" href="#">
+              <a className="nav-link text-white" href="#">
                 About us
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link mr-4 pr-5 text-white" href="#">
+              <a className="nav-link text-white" href="#">
                 Contact us
               </a>
             </li>
           </ul>
+<<<<<<< HEAD
           <div className="pt-5 mx-auto text-center mt-5">
             <h1 className='font-weight-bold bb text-white'>Book an appointment</h1>
             <p className='text-white bb2'>Reach out to our doctors or build your appointment right away</p>
@@ -75,6 +72,14 @@ class HomePageHeader extends Component {
                 <p className='text-white'>Healthy Blog</p>
               </div>
             </div>
+=======
+          <div className="hero-mid-text">
+            <h1>Book an appointment</h1>
+            <p>Reach out to our doctors or build your appointment right away</p>
+            <Link to='/booking'>
+               <button className="btn btn-danger px-3">Book now</button>
+            </Link>
+>>>>>>> 57391473d744dc84854246c718acf130095e4b58
           </div>
         </div>
       </header>
