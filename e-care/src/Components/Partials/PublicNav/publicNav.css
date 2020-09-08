@@ -4,7 +4,7 @@
 
 .search-field {
     border: none;
-    width: 373px !important;
+    /* width: 373px !important; */
 }
 
 .search-field::placeholder {

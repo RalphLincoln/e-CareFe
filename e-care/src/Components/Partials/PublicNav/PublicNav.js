@@ -44,7 +44,7 @@ export default class PublicNav extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarToggler">
           <div className="row">
-            <form style={{ border: '1px solid #006F76', borderRadius: '5px', width: '481px' }} className="my-2 pl-2 pr-5 form-inline my-lg-0">
+            <form style={{ border: '1px solid #006F76', borderRadius: '5px' }} className="my-2 pl-2 pr-5 form-inline my-lg-0">
               <label htmlFor=""><ImSearch style={{ color: '#007D85' }} /></label>
               <input
                 className="form-control search-field mr-sm-2"
