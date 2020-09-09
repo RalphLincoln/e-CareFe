@@ -13,13 +13,13 @@
 }
 
 .tag-btn {
-    border: 1px solid #007D85;
-    color: #007D85;
+    border: 1px solid #007D85 !important;
+    color: #007D85 !important;
 }
 
 .tag-btn:hover {
     background-color: #007D85;
-    color: white;
+    color: white !important;
 }
 
 .tag-btn2 {

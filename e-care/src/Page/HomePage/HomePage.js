@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
-import * as $ from "jquery";
 
 import './homepage.css';
+
+
+import { Switch, Route } from 'react-router-dom';
+import * as $ from "jquery";
+import "slick-carousel";
+
+import Booking from '../../Components/Booking/Booking';
+import "../../../node_modules/slick-carousel/slick/slick.css";
 
 
 // IMPORTING IMAGES
@@ -92,94 +99,72 @@ export default class HomePage extends Component {
         return (
             <div>
                 <HomePageHeader />
+                <Route path='/booking' component={Booking} />
                 <div className="container-fluid py-5">
-                    <img src={bg} className='img-fluid mt-5 mb-5 container-fluid' alt="bg" />
-                    <header className='pb-4'>
-                        <h3 className="text-center carouselh3 text-danger">Center of Excellence</h3>
-                        <p className="text-center carouselH3P">
+                    <header>
+                        <h3 className="text-center text-danger">Center of Excellence</h3>
+                        <p className="text-center">
                             Combining the best specialists and equipment to provide you nothing
                             short of the best in healthcare
-                        </p>
+          </p>
                     </header>
                     <div className="sections-carousel d-flex justify-content-around py-3">
                         <div className="d-flex flex-column align-items-center">
                             <img src={heart} alt="" />
-                            <p className='carouselText pt-3'>Heart</p>
+                            <p>Heart</p>
                         </div>
                         <div className="d-flex flex-column align-items-center">
                             <img src={brain} alt="" />
-                            <p className='carouselText pt-3'>Neuro</p>
+                            <p>Neuro</p>
                         </div>
                         <div className="d-flex flex-column align-items-center">
                             <img src={orthopaedic} alt="" />
-                            <p className='carouselText pt-3'>Orthopaedics</p>
+                            <p>Orthopaedics</p>
                         </div>
                         <div className="d-flex flex-column align-items-center">
                             <img src={pharm} alt="" />
-                            <p className='carouselText pt-3'>Critical</p>
+                            <p>Critical</p>
                         </div>
                         <div className="d-flex flex-column align-items-center">
                             <img src={robotics} alt="" />
-                            <p className='carouselText pt-3'>Robotics</p>
+                            <p>Robotics</p>
                         </div>
                     </div>
                 </div>
-
-
-
-                <div className="hero-image mb-5">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-6"></div>
-                            <div className="col-md-6 pt-4 pb-5 text-center">
-                                <p className='next text-white'>E-Care on News</p>
-                                <img src={smlogo} className='img-fluid p-4' alt="sm-logo" />
-                                <p className='next2 text-white'>Condimentum egestas lobortis quis est <br /> adipiscing phasellus sed.</p>
-                                <div className="row d-flex justify-content-center">
-                                    <img src={star} alt="star" className='img-fluid' />
-                                    <img src={star} alt="star" className='img-fluid' />
-                                    <img src={star} alt="star" className='img-fluid' />
-                                    <img src={star} alt="star" className='img-fluid' />
-                                    <img src={star} alt="star" className='img-fluid' />
-                                </div>
-                            </div>
+                <div className="container-fluid py-2">
+                    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 bg-info">
+                        <div className="col d-flex flex-column align-items-center justify-content-center py-4">
+                            <h2 className="text-white">500+</h2>
+                            <p className="lead font-weight-bold text-white text-center">
+                                Satisfied patients
+            </p>
                         </div>
-                    </div>
-                    <div className="container-fluid bg-cl py-2">
-                        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-                            <div className="col d-flex flex-column align-items-center justify-content-center py-4">
-                                <h2 className="text-white">500+</h2>
-                                <p className="lead font-weight-bold text-white text-center">
-                                    Satisfied patients
-                                </p>
-                            </div>
-                            <div className="col d-flex flex-column align-items-center justify-content-center py-4">
-                                <h2 className="text-white">210+</h2>
-                                <p className="lead font-weight-bold text-white text-center">
-                                    Doctors
-                                </p>
-                            </div>
-                            <div className="col d-flex flex-column align-items-center justify-content-center py-4">
-                                <h2 className="text-white">100+</h2>
-                                <p className="lead font-weight-bold text-white text-center">
-                                    Nurses
-                                </p>
-                            </div>
-                            <div className="col d-flex flex-column align-items-center justify-content-center py-4">
-                                <h2 className="text-white">50+</h2>
-                                <p className="lead font-weight-bold text-white text-center">
-                                    Care units
-                                </p>
-                            </div>
+                        <div className="col d-flex flex-column align-items-center justify-content-center py-4">
+                            <h2 className="text-white">210+</h2>
+                            <p className="lead font-weight-bold text-white text-center">
+                                Doctors
+            </p>
+                        </div>
+                        <div className="col d-flex flex-column align-items-center justify-content-center py-4">
+                            <h2 className="text-white">100+</h2>
+                            <p className="lead font-weight-bold text-white text-center">
+                                Nurses
+            </p>
+                        </div>
+                        <div className="col d-flex flex-column align-items-center justify-content-center py-4">
+                            <h2 className="text-white">50+</h2>
+                            <p className="lead font-weight-bold text-white text-center">
+                                Care units
+            </p>
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid pt-5">
+                <div className="container-fluid py-4">
                     <div className="row row-cols-1">
-                        <h3 className="text-center" style={{ color: '#FC3B3B', fontFamily: "'Source Sans Pro', sans-serif", fontWeight: "600" }} >Register yourself</h3>
-                        <p className="text-center registerP">
+                        <h3 className="text-center text-danger">Register yourself</h3>
+                        <p className="text-center">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        </p>
+          </p>
                     </div>
                 </div>
                 <div className="container-fluid mt-5">

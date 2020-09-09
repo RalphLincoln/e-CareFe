@@ -5,7 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css'
 
-import CustomButton from '../Partials/CustomButton/CustomButton';
+import CustomButton from '../CustomButton/CustomButton';
 
 import poweredby from "../../Images/poweredby.png";
 import success from "../../Images/success.png";
